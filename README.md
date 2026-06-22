@@ -48,12 +48,30 @@ Each skill targets a specific Manim version, Python version, and set of AI agent
 |---|---|---|
 | Import | `from manim import *` | `from manimlib import *` |
 | CLI | `manim` | `manimgl` |
-| Renderer | Cairo (CPU) | OpenGL (GPU) |
+| Default renderer | Cairo | OpenGL |
 | Maintained by | Community | Grant Sanderson (3Blue1Brown) |
 | Best for | Production, stable output | Interactive dev, 3D, rapid prototyping |
 | Code compatible | No | No |
 
 The two engines are **not interchangeable**. Code written for one will not run on the other without modifications. If you are unsure, start with ManimCE.
+
+### Cairo vs OpenGL: what actually differs
+
+ManimCE ships with two renderers: Cairo (default) and an experimental OpenGL mode (`--renderer=opengl`). ManimGL uses OpenGL exclusively. These are three distinct rendering paths with meaningfully different behavior.
+
+| | Cairo (ManimCE default) | OpenGL (ManimCE experimental) | ManimGL OpenGL |
+|---|---|---|---|
+| Status | Stable, production-ready | Experimental, incomplete | Stable for 3b1b's workflow |
+| Output | File via FFmpeg | File or live preview window | File or live preview window |
+| CPU / GPU | CPU (software rasterization) | GPU | GPU |
+| 3D support | Limited (ThreeDScene, no real depth) | Better, but depth ordering is buggy | Full, designed for 3D |
+| LaTeX / MathTex | Full support | Full support | Full support |
+| Z-ordering | Correct | Broken in some cases (issue #4721) | Correct |
+| `Circumscribe` and some animations | Work | Had errors, partially fixed | Work |
+| Live preview | No | Yes (`--preview`) | Yes |
+| Recommended for | All production use and AI-generated code | Experimenting with live preview only | Interactive 3D development |
+
+**The practical takeaway for AI agents:** generate code targeting the Cairo renderer. OpenGL in ManimCE has open bugs and unfinished internals (the codebase contains literal `TODO: Handle data locking / unlocking` in the play loop). Any skill that produces code expected to render reliably should default to Cairo, meaning no `--renderer=opengl` flag and no `OpenGLScene` subclass.
 
 ### System dependencies quick install
 
