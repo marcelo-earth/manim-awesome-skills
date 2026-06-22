@@ -15,11 +15,13 @@ Browse the visual directory at [animo.video/skills](https://animo.video/skills).
 ## Contents
 
 - [Skills](#skills)
+  - [Planning](#planning)
   - [ManimCE](#manimce)
   - [ManimGL](#manimgl)
   - [Full Pipeline](#full-pipeline)
   - [Templates](#templates)
   - [Video Production](#video-production)
+- [Recommended workflow](#recommended-workflow)
 - [What are Agent Skills?](#what-are-agent-skills)
 - [How to Install](#how-to-install)
 - [Contributing](#contributing)
@@ -27,6 +29,14 @@ Browse the visual directory at [animo.video/skills](https://animo.video/skills).
 ---
 
 ## Skills
+
+### Planning
+
+Use these before writing any code. They turn a vague idea into a structured scene-by-scene plan.
+
+| Skill | Author | Description | Install |
+|---|---|---|---|
+| Manim Composer | adithya-s-k | Interviews you about topic, audience, and style, then outputs a full scenes.md ready for implementation | `npx skills add adithya-s-k/manim_skill/skills/manim-composer` |
 
 ### ManimCE
 
@@ -70,6 +80,24 @@ Skills that go beyond animation into narration, audio, and final video packaging
 
 ---
 
+## Recommended workflow
+
+Most Manim videos benefit from separating planning from implementation:
+
+1. **Plan** with `manim-composer`: the agent researches the topic, asks targeted questions, and produces a `scenes.md` file specifying every scene.
+2. **Implement** with `manimce-best-practices` or `manimgl-best-practices`: the agent has the scene plan and the full Manim API knowledge to write clean, renderable code.
+3. **Package** with `video-skills` if you need narration, audio, and a cover on top.
+
+Installing all three at once:
+
+```bash
+npx skills add adithya-s-k/manim_skill/skills/manim-composer
+npx skills add adithya-s-k/manim_skill/skills/manimce-best-practices
+npx skills add lispking/video-skills
+```
+
+---
+
 ## What are Agent Skills?
 
 Agent Skills are an open standard for giving AI coding agents domain knowledge. A skill is a structured package (instructions, examples, context) that an agent loads before working on a specific library or task.
@@ -82,19 +110,19 @@ The standard is maintained at [agentskills.io](https://agentskills.io). Skills a
 
 ## How to Install
 
-1. Install the skills CLI (ships with Node.js, no global install needed):
+The skills CLI ships with Node.js. No global install needed:
 
 ```bash
 npx skills add <skill-install-command>
 ```
-
-2. The skill is added to your agent's context. Open your agent and start prompting.
 
 Example:
 
 ```bash
 npx skills add adithya-s-k/manim_skill/skills/manimce-best-practices
 ```
+
+The skill is immediately active in your agent's context.
 
 ---
 
