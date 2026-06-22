@@ -14,6 +14,7 @@ Browse the visual directory at [animo.video/skills](https://animo.video/skills).
 
 ## Contents
 
+- [Compatibility matrix](#compatibility-matrix)
 - [Skills](#skills)
   - [Planning](#planning)
   - [ManimCE](#manimce)
@@ -25,6 +26,46 @@ Browse the visual directory at [animo.video/skills](https://animo.video/skills).
 - [What are Agent Skills?](#what-are-agent-skills)
 - [How to Install](#how-to-install)
 - [Contributing](#contributing)
+
+---
+
+## Compatibility matrix
+
+Each skill targets a specific Manim version, Python version, and set of AI agents. Use this before installing to avoid environment mismatches.
+
+| Skill | Manim engine | Manim version | Python | Agent | System deps |
+|---|---|---|---|---|---|
+| Manim Composer | ManimCE or ManimGL | any | 3.7+ | Claude Code, Cursor, any | FFmpeg, LaTeX |
+| ManimCE Best Practices | ManimCE | any | 3.7+ | Claude Code, Cursor, any | FFmpeg, LaTeX |
+| ManimGL Best Practices | ManimGL | any | 3.7+ | Claude Code, Cursor, any | FFmpeg, LaTeX, OpenGL |
+| Manim Skill | ManimCE | latest | 3.7+ | Claude Code | FFmpeg, LaTeX, cairo |
+| Manim Templates | ManimCE | any | 3.7+ | Claude Code, Cursor, any | FFmpeg, LaTeX |
+| Video Skills | ManimCE | any | 3.10+ | Claude Code, Cursor, any | FFmpeg, LaTeX, edge-tts |
+
+### Engine differences
+
+| | ManimCE | ManimGL |
+|---|---|---|
+| Import | `from manim import *` | `from manimlib import *` |
+| CLI | `manim` | `manimgl` |
+| Renderer | Cairo (CPU) | OpenGL (GPU) |
+| Maintained by | Community | Grant Sanderson (3Blue1Brown) |
+| Best for | Production, stable output | Interactive dev, 3D, rapid prototyping |
+| Code compatible | No | No |
+
+The two engines are **not interchangeable**. Code written for one will not run on the other without modifications. If you are unsure, start with ManimCE.
+
+### System dependencies quick install
+
+**macOS**
+```bash
+brew install cairo pkg-config ffmpeg mactex
+```
+
+**Ubuntu / Debian**
+```bash
+sudo apt install ffmpeg texlive-full libcairo2-dev
+```
 
 ---
 
