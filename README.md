@@ -2,7 +2,7 @@
 
 A curated list of Agent Skills for creating animations with [Manim](https://www.manim.community/).
 
-Agent Skills are modular packages that give AI coding agents (Claude Code, Cursor, etc.) instant expertise in Manim without manual prompting. Install any skill with a single line using the [skills CLI](https://skills.sh).
+Agent Skills are modular packages that give AI coding agents (Claude Code, Gemini CLI, OpenCode, OpenAI Codex, Cursor, and others) instant expertise in Manim without manual prompting. Install any skill with a single line using the [skills CLI](https://skills.sh).
 
 ```bash
 npx skills add <skill>
@@ -35,12 +35,12 @@ Each skill targets a specific Manim version, Python version, and set of AI agent
 
 | Skill | Manim engine | Manim version | Python | Agent | System deps |
 |---|---|---|---|---|---|
-| Manim Composer | ManimCE or ManimGL | any | 3.7+ | Claude Code, Cursor, any | FFmpeg, LaTeX |
-| ManimCE Best Practices | ManimCE | any | 3.7+ | Claude Code, Cursor, any | FFmpeg, LaTeX |
-| ManimGL Best Practices | ManimGL | any | 3.7+ | Claude Code, Cursor, any | FFmpeg, LaTeX, OpenGL |
-| Manim Skill | ManimCE | latest | 3.7+ | Claude Code | FFmpeg, LaTeX, cairo |
-| Manim Templates | ManimCE | any | 3.7+ | Claude Code, Cursor, any | FFmpeg, LaTeX |
-| Video Skills | ManimCE | any | 3.10+ | Claude Code, Cursor, any | FFmpeg, LaTeX, edge-tts |
+| Manim Composer | ManimCE or ManimGL | any | 3.7+ | Claude Code, Gemini CLI, OpenCode, Codex, any | FFmpeg, LaTeX |
+| ManimCE Best Practices | ManimCE | any | 3.7+ | Claude Code, Gemini CLI, OpenCode, Codex, any | FFmpeg, LaTeX |
+| ManimGL Best Practices | ManimGL | any | 3.7+ | Claude Code, Gemini CLI, OpenCode, Codex, any | FFmpeg, LaTeX, OpenGL |
+| Manim Skill | ManimCE | latest | 3.7+ | Claude Code, Gemini CLI, OpenCode, Codex | FFmpeg, LaTeX, cairo |
+| Manim Templates | ManimCE | any | 3.7+ | Claude Code, Gemini CLI, OpenCode, Codex, any | FFmpeg, LaTeX |
+| Video Skills | ManimCE | any | 3.10+ | Claude Code, Gemini CLI, OpenCode, Codex, any | FFmpeg, LaTeX, edge-tts |
 
 ### Engine differences
 
@@ -119,7 +119,7 @@ Skills that handle the full animation workflow: planning, coding, and rendering.
 
 | Skill | Author | Description | Install |
 |---|---|---|---|
-| Manim Skill | Yusuke710 | Claude Code plans the scene, writes Manim code, and renders the video automatically | `npx skills add Yusuke710/manim-skill` |
+| Manim Skill | Yusuke710 | Plans the scene, writes Manim code, and renders the video automatically inside Claude Code, Gemini CLI, OpenCode, or Codex | `npx skills add Yusuke710/manim-skill` |
 
 ### Templates
 
