@@ -95,7 +95,7 @@ Use these before writing any code. They turn a vague idea into a structured scen
 
 | Skill | Author | Description | Install |
 |---|---|---|---|
-| Manim Composer | adithya-s-k | Interviews you about topic, audience, and style, then outputs a full scenes.md ready for implementation | `npx skills add adithya-s-k/manim_skill/skills/manim-composer` |
+| Manim Composer | adithya-s-k | Interviews you about topic, audience, and style, then outputs a full scenes.md ready for implementation | `npx skills add adithya-s-k/manim_skill` |
 
 ### ManimCE
 
@@ -103,7 +103,7 @@ Skills for [Manim Community Edition](https://www.manim.community/), the actively
 
 | Skill | Author | Description | Install |
 |---|---|---|---|
-| ManimCE Best Practices | adithya-s-k | Scene patterns, math objects, and smooth animations for 3Blue1Brown-style videos | `npx skills add adithya-s-k/manim_skill/skills/manimce-best-practices` |
+| ManimCE Best Practices | adithya-s-k | Scene patterns, math objects, and smooth animations for 3Blue1Brown-style videos | `npx skills add adithya-s-k/manim_skill` |
 
 ### ManimGL
 
@@ -111,7 +111,7 @@ Skills for [ManimGL](https://github.com/3b1b/manim), Grant Sanderson's original 
 
 | Skill | Author | Description | Install |
 |---|---|---|---|
-| ManimGL Best Practices | adithya-s-k | High-quality mathematical animations with the original 3b1b engine | `npx skills add adithya-s-k/manim_skill/skills/manimgl-best-practices` |
+| ManimGL Best Practices | adithya-s-k | High-quality mathematical animations with the original 3b1b engine | `npx skills add adithya-s-k/manim_skill` |
 
 ### Full Pipeline
 
@@ -150,8 +150,8 @@ Most Manim videos benefit from separating planning from implementation:
 Installing all three at once:
 
 ```bash
-npx skills add adithya-s-k/manim_skill/skills/manim-composer
-npx skills add adithya-s-k/manim_skill/skills/manimce-best-practices
+npx skills add adithya-s-k/manim_skill
+npx skills add adithya-s-k/manim_skill
 npx skills add lispking/video-skills
 ```
 
@@ -178,7 +178,7 @@ npx skills add <skill-install-command>
 Example:
 
 ```bash
-npx skills add adithya-s-k/manim_skill/skills/manimce-best-practices
+npx skills add adithya-s-k/manim_skill
 ```
 
 The skill is immediately active in your agent's context.
