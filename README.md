@@ -147,10 +147,9 @@ Most Manim videos benefit from separating planning from implementation:
 2. **Implement** with `manimce-best-practices` or `manimgl-best-practices`: the agent has the scene plan and the full Manim API knowledge to write clean, renderable code.
 3. **Package** with `video-skills` if you need narration, audio, and a cover on top.
 
-Installing all three at once:
+Installing all at once:
 
 ```bash
-npx skills add adithya-s-k/manim_skill
 npx skills add adithya-s-k/manim_skill
 npx skills add lispking/video-skills
 ```
